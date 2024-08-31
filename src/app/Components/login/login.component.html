@@ -1,0 +1,52 @@
+
+
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+    <h1 class="text-3xl font-bold mb-6 text-center">Login Here</h1>
+
+    <!-- Error Message -->
+    @if (errorMessage) {
+      <div  class="text-red-500 mb-4">{{ errorMessage }}</div>
+    }
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="space-y-6">
+      <!-- Email -->
+      <div>
+        <input 
+          type="text" 
+          placeholder="Email" 
+          formControlName="email" 
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" 
+        />
+      </div>
+
+      <!-- Password -->
+      <div>
+        <input 
+          type="password" 
+          placeholder="Password" 
+          formControlName="password" 
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" 
+        />
+      </div>
+
+      <!-- Sign In Button -->
+      <div>
+        <button 
+          type="submit" 
+          class="w-full bg-indigo-600 text-white font-medium py-3 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
+          Sign In
+        </button>
+      </div>
+
+      <!-- Register Link -->
+      <div class="text-center mt-4">
+        <a href="/register" class=" text-indigo-600 hover:cursor-pointer">New user?</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+

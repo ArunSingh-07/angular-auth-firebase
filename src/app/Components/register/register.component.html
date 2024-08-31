@@ -1,0 +1,71 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+    <h1 class="text-3xl font-bold mb-6 text-center">Register Here</h1>
+
+    <!-- Error Message -->
+    @if (errorMessage) {
+      <div class="text-red-500">{{ errorMessage }}</div>
+    }
+    
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="space-y-6">
+      <!-- Username -->
+      <div>
+        <label for="username" class="block text-gray-700 font-medium mb-2">Username</label>
+        <input id="username" type="text" placeholder="Username" formControlName="username" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+        <input id="email" type="text" placeholder="Email" formControlName="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password" class="block text-gray-700 font-medium mb-2">Password</label>
+        <input id="password" type="password" placeholder="Password" formControlName="password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      </div>
+
+      <!-- Sign Up Button -->
+      <div>
+        <button type="submit" class="w-full bg-indigo-600 text-white font-medium py-3 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">Sign Up</button>
+      </div>
+
+      <!--  Sign In Link -->
+     <div class="text-center mt-4">
+        <a routerLink="/login" class="text-indigo-600 hover:cursor-pointer">Already have an account? Sign In</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <h1>Register</h1>
+
+@if (errorMessage) {
+  <div class="text-red-500">{{ errorMessage }}</div>
+}
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    User name: <input type="text" placeholder="Username" formControlName="username" />
+  </div>
+  <div>
+    Email: <input type="text" placeholder="Email" formControlName="email" />
+  </div>
+  <div>
+     Password: <input type="password" placeholder="Password" formControlName="password" />
+  </div>
+  <div>
+    <button type="submit">Sign Up</button>
+    <a href="/login">Already have an account? Sign In</a>
+  </div>
+</form> -->

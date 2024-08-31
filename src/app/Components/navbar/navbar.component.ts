@@ -1,18 +1,20 @@
+
+import { RouterModule } from '@angular/router';
 import { Component, inject, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './Components/navbar/navbar.component';
-import { AuthService } from './auth.service';
+
+import { AuthService } from '../../auth.service';
+
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-navbar',
   standalone: true,
-  imports: [NavbarComponent, RouterOutlet],
-  templateUrl: './app.component.html',
+  imports: [RouterModule],
+  templateUrl: './navbar.component.html',
   styles: []
 })
-export class AppComponent implements OnInit {
-  authService = inject(AuthService);
+export class NavbarComponent {
+  authService = inject(AuthService );
 
   ngOnInit(): void {
     this.authService.user$.subscribe(user => {
@@ -32,4 +34,5 @@ export class AppComponent implements OnInit {
   logout(): void {
     this.authService.logout();
 
-}}
+}
+}
