@@ -1,7 +1,7 @@
 
 import { RouterModule } from '@angular/router';
 import { Component, inject, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { AuthService } from '../../auth.service';
 
 
@@ -15,6 +15,7 @@ import { AuthService } from '../../auth.service';
 })
 export class NavbarComponent {
   authService = inject(AuthService );
+  router = inject(Router);
 
   ngOnInit(): void {
     this.authService.user$.subscribe(user => {
@@ -33,6 +34,7 @@ export class NavbarComponent {
   }
   logout(): void {
     this.authService.logout();
-
+    this.router.navigate(['/login']);
 }
+
 }

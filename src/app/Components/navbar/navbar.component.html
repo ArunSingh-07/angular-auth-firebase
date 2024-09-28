@@ -1,4 +1,4 @@
-<nav class="bg-gray-800">
+<nav class="bg-emerald-800">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <!-- Company logo and main links -->
@@ -12,9 +12,9 @@
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
          
           @if(authService.currentUserSig()==null){
-            <div class="ml-3 bg-gray-800 text-sm text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                <a class="p-5 justify-end" routerLink="/login">Login</a>
-                <a routerLink="/register">Register</a>
+            <div class=" font-poppins ml-3 bg-emerald-800 text-s text-gray-300 ">
+                <a class="p-5 justify-end hover:bg-emerald-700 hover:text-white px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-800" href="/login">Login</a>
+                <a  class="p-5 justify-end hover:bg-emerald-700 hover:text-white px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-800" href="/register ">Register</a>
               </div>
         }
         </div>

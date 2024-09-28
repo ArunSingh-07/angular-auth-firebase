@@ -1,44 +1,46 @@
 <div class="min-h-screen flex items-center justify-center bg-gray-100">
   <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-    <h1 class="text-3xl font-bold mb-6 text-center">Register Here</h1>
+    <h1 class="text-3xl font-bold mb-6 font-poppins text-center">Register Here</h1>
 
     <!-- Error Message -->
     @if (errorMessage) {
-      <div class="text-red-500">{{ errorMessage }}</div>
+      <div class="text-red-500 font-poppins">{{ errorMessage }}</div>
     }
     
 
     <form [formGroup]="form" (ngSubmit)="onSubmit()" class="space-y-6">
       <!-- Username -->
       <div>
-        <label for="username" class="block text-gray-700 font-medium mb-2">Username</label>
-        <input id="username" type="text" placeholder="Username" formControlName="username" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        <label for="username" class="block font-poppins text-gray-700 font-medium mb-2">Username</label>
+        <input id="username" type="text" placeholder="Username" formControlName="username" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
       </div>
 
       <!-- Email -->
       <div>
-        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-        <input id="email" type="text" placeholder="Email" formControlName="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        <label for="email" class="block font-poppins text-gray-700 font-medium mb-2">Email</label>
+        <input id="email" type="text" placeholder="Email" formControlName="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
       </div>
 
       <!-- Password -->
       <div>
         <label for="password" class="block text-gray-700 font-medium mb-2">Password</label>
-        <input id="password" type="password" placeholder="Password" formControlName="password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        <input id="password" type="password" placeholder="Password" formControlName="password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500" />
       </div>
 
       <!-- Sign Up Button -->
       <div>
-        <button type="submit" class="w-full bg-indigo-600 text-white font-medium py-3 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">Sign Up</button>
+        <button type="submit" class=" font-poppins w-full bg-emerald-600 text-white font-medium py-3 rounded-lg hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500">Sign Up</button>
       </div>
 
       <!--  Sign In Link -->
      <div class="text-center mt-4">
-        <a routerLink="/login" class="text-indigo-600 hover:cursor-pointer">Already have an account? Sign In</a>
+        <a href="/login" class="font-poppins text-emerald-600 hover:cursor-pointer hover:underline">Already have an account? Sign In</a>
       </div>
     </form>
   </div>
 </div>
+
+
 
 
 
